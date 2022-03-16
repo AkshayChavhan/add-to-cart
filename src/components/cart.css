@@ -151,6 +151,7 @@ header {
 .cart-items-container {
   width: 90%;
   height: 56rem;
+  /* overflow-y: scroll; */
 
 }
 
@@ -294,7 +295,7 @@ header {
   letter-spacing: 1px;
 }
 
-/* hover effects  */
+/* hover effects  */  
 .fa-trash-alt {
   color: #ed4848;
 }
