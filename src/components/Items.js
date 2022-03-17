@@ -1,9 +1,9 @@
 import React ,{ useContext} from 'react' ;
 import { CartContext } from './Cart';
 
-const Items = ({ id, title, description, price, img, quantity, amount }) => {
+const Items = ({ id, title, description, price, img, quantity }) => {
     
-    const {removeItem} = useContext(CartContext);
+    const { removeItem ,increment } = useContext(CartContext);
     
     return (
         <>
@@ -40,7 +40,7 @@ const Items = ({ id, title, description, price, img, quantity, amount }) => {
                 </div>
                 <div className='add-minus-quantity'>
                     <i className='fas fa-minus minus'></i>
-                    <input type="text" placeholder='2'></input>
+                    <input type="text" placeholder={quantity }></input>
                     <i className='fas fa-plus add'></i>   
                 </div>
                 <div className='price'>
@@ -64,8 +64,8 @@ const Items = ({ id, title, description, price, img, quantity, amount }) => {
                 </div>
                 <div className='add-minus-quantity'>
                     <i className='fas fa-minus minus'></i>
-                    <input type="text" placeholder='2'></input>
-                    <i className='fas fa-plus add'></i>
+                    <input type="text" placeholder={quantity}></input>
+                    <i className='fas fa-plus add' onClick={() => increment(id)}></i>
                 </div>
                 <div className='price'>
                     <h3>2000rs</h3>
